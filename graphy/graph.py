@@ -73,12 +73,10 @@ class Graph:
                 neighbors.add(edge["target"])
         return neighbors
 
-    def write_json(self, path=os.path.join(os.getcwd(), 'static', 'data')):
-        print(path)
+    def write_json(self, path=os.path.join(os.getcwd(), 'graphy', 'static', 'data')):
         if not os.path.exists(path):
             os.makedirs(path)
         with open(os.path.join(path, 'graph.json'), 'w') as f:
-            print(self.graph)
             json.dump(self.graph, f, indent=2)
 
 
@@ -112,7 +110,7 @@ if __name__ == "__main__":
     test_graph = build_graph()
     # print(test_graph.graph)
     # print(test_graph.get_neighbors('n0'))
-    test_graph_dir = os.path.join(os.getcwd(), 'static', 'data')
+    test_graph_dir = os.path.join(os.getcwd(), 'graphy', 'static', 'data')
     test_graph.write_json(test_graph_dir)
     with open(os.path.join(test_graph_dir, 'graph.json'), 'r') as test_json:
         test_graph_json = json.load(test_json)

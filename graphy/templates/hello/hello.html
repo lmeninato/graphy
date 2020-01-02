@@ -21,7 +21,6 @@
 <script src="{{url_for('static', filename='js/sigma.min.js')}}" type="text/javascript"></script>
 <script>
     let graph_data = {{json_data|safe}};
-    console.log(graph_data);
 
     s = new sigma({
             graph: graph_data,

@@ -1,3 +1,4 @@
 venv/
 .idea/
 *.pyc
+graphy/static/data/graph.json
